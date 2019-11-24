@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+  
+body{
+    width: 100vw;
+    text-align: center;
+
+    background-image: url('https://images.unsplash.com/photo-1552596828-4e48cd784320?ixlib=rb-1.2.1&w=1000&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center_content{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.title{
+    font-size: 75px;
+    margin-top: 50px;
+    color: #eeeaea;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.container textarea{
+    flex-basis: 45%;
+    height: 40vh;
+    min-height: 40vh;
+    max-height: 40vh;
+    margin: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 3px;
+    color: #dddddc;
+    background: rgba(233, 233, 233, 0.192);
+}
+
+.container textarea::placeholder{
+    color: #dddddc;
+}
+
+#output::selection{
+    background: rgba(88, 35, 172, 0.76);
+}
+
+.btn{
+    width: 50%;
+    padding: 8px;
+    background: rgba(214, 214, 214, 0.26);
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    color: #dfdfdf;
+    margin: auto;
+    cursor: pointer;
+    transition:  background ease-in 0.2s;
+
+}
+
+.btn:hover{
+    background: rgba(177, 147, 233, 0.356);
+}
+
+@media screen and (max-width:1200px){
+    .container textarea{
+        flex-basis: 100%;
+    }
+    
+    .title{
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    .container textarea{
+        flex-basis: 100%;
+    }
+    
+    .title{
+        font-size: 6vw;
+    }
+}
