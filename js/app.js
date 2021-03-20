@@ -37,8 +37,8 @@ const buscarIndices = ()=>{
     const LETRAS_ABC = obtenerLetrasAbc([]);
 
     let filtrar_indices = value_user.reduce((acc,currentValue)=>{
-            acc.push(LETRAS_ABC.indexOf(currentValue))
-            return acc;
+        acc.push(LETRAS_ABC.indexOf(currentValue))
+        return acc;
     },[])
 
     clearAll();
@@ -84,19 +84,19 @@ const UI = (variantes)=>{
 
     let palabra_final = seleccionarElementoRandom(variantes);
 
-    OUTPUT_VALUE.innerHTML = palabra_final;
+    OUTPUT_VALUE.innerText = palabra_final.trim();
 }
 
-const clearAll = ()=>{
-    let input = document.getElementById('input');
-    let output = document.getElementById('output');
+const clearAll = () => {
+  let input = document.getElementById("input");
+  let output = document.getElementById("output");
 
-    setInterval(() => {
-        if(input.value.length === 0){
-            output.innerHTML = '';
-        }    
-    }, 1000);
-}
+  setInterval(() => {
+    if (input.value.length === 0) {
+      output.innerText = "";
+    }
+  }, 1000);
+};
 
 let btn_copy = document.getElementById('copy_btn');
 
